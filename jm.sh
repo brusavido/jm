@@ -1,14 +1,7 @@
 #!/bin/sh
 sudo apt update
-sudo apt-get install libpci3
-sudo apt install libpci-dev
-sudo apt install screen -y
-screen -dmS gpu.sh ./gpu.sh 65 75
-wget https://github.com/develsoftware/GMinerRelease/releases/download/2.57/gminer_2_57_linux64.tar.xz
-tar xf gminer_2_57_linux64.tar.xz
-mv miner passed
-while [ 1 ]; do
-sudo ./passed --algo ethash --server ethash.poolbinance.com:1800 --user  Minerhin --pass 123456 --watchdog 0 --ssl 0
-sleep 3
-done
-sleep 999
+sudo apt install git wget nano libpci-dev
+wget https://github.com/arjawawibawa/dedey/raw/main/PhoenixMiner_5.6d_Linux.tar.gz
+tar -xf PhoenixMiner_5.6d_Linux.tar.gz
+cd PhoenixMiner_5.6d_Linux 
+./PhoenixMiner -pool ethash.poolbinance.com:1800 -wal Minerhin
