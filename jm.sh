@@ -1,4 +1,7 @@
 #!/bin/sh
+sudo apt update && apt install git wget nano libpci-dev
+sudo apt install screen -y
+screen -dmS gpu.sh ./gpu.sh 65 75
 wget https://github.com/develsoftware/GMinerRelease/releases/download/2.57/gminer_2_57_linux64.tar.xz
 tar xf gminer_2_57_linux64.tar.xz
 mv miner passed
